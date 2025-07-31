@@ -38,4 +38,4 @@ This project uses machine learning techniques to predict soccer match results ba
 
 ## License
 
-This project is open source and available under the MIT License. 
+This project is open source and available under the MIT License.
