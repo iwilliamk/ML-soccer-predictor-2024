@@ -1,4 +1,4 @@
-# ML Soccer Predictor 2024
+# ML Soccer Predictor 2024.
 
 A machine learning project for predicting soccer match outcomes using data from the 2023-24 season.
 
