@@ -1,41 +1,68 @@
-# ML Soccer Predictor 2024.
+# ⚽ 23-24 Soccer Match Outcome Predictor
 
-A machine learning project for predicting soccer match outcomes using data from the 2023-24 season.
+This project builds a machine learning model to predict soccer match outcomes for the 2023–2024 season. Using a Random Forest Classifier and hyperparameter tuning via `RandomizedSearchCV`, the model aims to classify whether the home team wins or not based on match statistics.
 
-## Project Overview
+---
 
-This project uses machine learning techniques to predict soccer match results based on historical data and various match statistics.
+## 📊 Dataset
 
-## Files
+- **File**: `23-24Season.csv`
+- **Source**: Custom dataset with match stats for the 2023–2024 season
+- **Target Variable**: `Target`  
+  - `1` → Home team wins  
+  - `0` → Otherwise (loss or draw)
 
-- `predictor.ipynb`: Jupyter notebook containing the machine learning analysis and prediction models
-- `23-24Season.csv`: Dataset containing match data from the 2023-24 season
+---
 
-## Getting Started
+## 🧠 Model Pipeline
 
-1. Clone this repository
-2. Install required dependencies (pandas, numpy, scikit-learn, etc.)
-3. Open `predictor.ipynb` in Jupyter Notebook or JupyterLab
-4. Run the cells to see the analysis and predictions
+1. **Preprocessing**  
+   - Drop missing values  
+   - Feature scaling (if needed)  
+   - Encode categorical columns (if any)
 
-## Features
+2. **Train-Test Split**  
+   - 80% training, 20% testing
 
-- Data preprocessing and analysis
-- Feature engineering
-- Machine learning model training
-- Match outcome predictions
-- Performance evaluation
+3. **Model Selection**  
+   - `RandomForestClassifier`
 
-## Requirements
+4. **Hyperparameter Tuning**  
+   - `RandomizedSearchCV` over:
+     - `n_estimators`
+     - `max_depth`
+     - `min_samples_split`
+     - `min_samples_leaf`
+     - `max_features`
+     - `class_weight`
 
-- Python 3.7+
-- Jupyter Notebook
+5. **Evaluation Metrics**  
+   - Accuracy  
+   - Precision, Recall, F1-Score  
+   - Confusion Matrix
+
+---
+
+## 🏆 Best Model Performance (Latest)
+
+| Metric       | Value |
+|--------------|-------|
+| Accuracy     | 58%   |
+| F1 Score     | ~0.57 |
+| Best Params  | (from `RandomizedSearchCV`) |
+
+> ⚠️ Class imbalance observed: consider using SMOTE or adjusting thresholds in future iterations.
+
+---
+
+## 🔧 Requirements
+
+- Python 3.8+
 - pandas
-- numpy
 - scikit-learn
-- matplotlib
-- seaborn
+- numpy
+- matplotlib / seaborn (for optional visualization)
 
-## License
-
-This project is open source and available under the MIT License.
+Install all with:
+```bash
+pip install -r requirements.txt
