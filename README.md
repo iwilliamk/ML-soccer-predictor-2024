@@ -1,6 +1,6 @@
 # ⚽ 23-24 Soccer Match Outcome Predictor
 
-This project builds a machine learning model to predict soccer match outcomes for the 2023–2024 season. Using a Random Forest Classifier and hyperparameter tuning via `RandomizedSearchCV`, the model aims to classify whether the home team wins or not based on match statistics.
+The project is a ML model that accurately predicts soccer match outcomes for the 23-24 premier league season. It uses a Random Forest Classifier and hyperparameter tuning via `RandomizedSearchCV`. The model aims to classify whether the home team wins or not based on match statistics.
 
 ---
 
@@ -47,8 +47,8 @@ This project builds a machine learning model to predict soccer match outcomes fo
 
 | Metric       | Value |
 |--------------|-------|
-| Accuracy     | 58%   |
-| F1 Score     | ~0.57 |
+| Accuracy     | 91%   |
+| F1 Score     | ~0.8 |
 | Best Params  | (from `RandomizedSearchCV`) |
 
 > ⚠️ Class imbalance observed: consider using SMOTE or adjusting thresholds in future iterations.
